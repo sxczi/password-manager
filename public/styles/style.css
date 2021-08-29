@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+.add-account-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+  height: 400px;
+  width: 400px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-account-form h2 {
+  margin-bottom: 1em;
+}
+
+.add-account-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-account-form form input {
+  padding: .5em 1em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 1.5em;
+}
+
+.add-account-form form button {
+  padding: .5em .75em;
+  background-color: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+header {
+  width: 60%;
+  margin: auto;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .left, header .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .right button {
+  border: none;
+  border-radius: 50%;
+  background-color: #222;
+  color: #fff;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+}
+
+main {
+  width: 60%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+main .accounts .top-row {
+  margin-top: 0 !important;
+  margin-bottom: 2em !important;
+  color: gray;
+}
+
+main .accounts .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d4d6d9;
+}
+
+main .accounts .row .left, main .accounts .row .center, main .accounts .row .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .accounts .row input {
+  border: none;
+  background-color: transparent;
+  font: medium Verdana,sans-serif;
+  letter-spacing: 1px;
+  width: 125px;
+}
+
+main .accounts .row input[type=username] {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main .accounts .row input[type=text] {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main .accounts .row .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .accounts .row .right .password, main .accounts .row .right .buttons {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .accounts .row .right .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .accounts .row .right .buttons .dots, main .accounts .row .right .buttons #copy {
+  margin-left: .75em;
+}
+
+main .accounts .row .right .buttons svg {
+  cursor: pointer;
+}
+
+main .accounts .row .right .buttons .dots {
+  position: relative;
+}
+
+main .accounts .row .right .buttons .dots:hover .dropdown {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+main .accounts .row .right .buttons .dots .dropdown {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  z-index: 1;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main .accounts .row .right .buttons .dots .dropdown ul {
+  list-style: none;
+}
+
+main .accounts .row .right .buttons .dots .dropdown ul #delete:hover {
+  background-color: crimson;
+  color: white;
+}
+
+main .accounts .row .right .buttons .dots .dropdown ul li {
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 3px;
+}
+
+main .accounts .row .right .buttons .dots .dropdown ul li:first-child {
+  margin-bottom: .5em;
+}
+
+main .accounts .row .right .buttons .dots .dropdown ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.add-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 30px;
+  margin-right: 20%;
+}
+
+.add-button button {
+  background-color: crimson;
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.add-button button:hover {
+  background-color: #ac1030;
+}
+
+@media screen and (max-width: 1200px) {
+  header, main {
+    width: 90%;
+  }
+  .add-button {
+    margin-right: 5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
