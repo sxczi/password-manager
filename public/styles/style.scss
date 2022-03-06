@@ -18,6 +18,29 @@ body {
 .dark-mode {
   background-color: #222;
   color: white;
+  input {
+    color: white !important;
+  }
+  .row {
+    border-bottom-color: white !important;
+  }
+  .top-row {
+    color: white !important;
+  }
+  svg {
+    fill: white !important;
+  }
+  .dropdown {
+    background-color: #222 !important;
+    color: white !important;
+    ul {
+      li {
+        &:first-child:hover {
+          background-color: #333 !important;
+        }
+      }
+    }
+  }
 }
 
 header {
@@ -59,7 +82,7 @@ main {
     .top-row {
       margin-top: 0 !important;
       margin-bottom: 2em !important;
-      color: gray;
+      color: #404040;
     }
 
     .row {
@@ -202,22 +225,24 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-    header {
-        h1 {
-            font-size: 24px;
-        }
+  header {
+    h1 {
+      font-size: 24px;
     }
+  }
 
-    .row {
-        flex-direction: column;
-        .left, .center, .right {
-            margin-bottom: 1em;
-        }
-        .right {
-            input {
-                margin-right: 1em;
-                width: 150px;
-            }
-        }
+  .row {
+    flex-direction: column;
+    .left,
+    .center,
+    .right {
+      margin-bottom: 1em;
     }
+    .right {
+      input {
+        margin-right: 1em;
+        width: 150px;
+      }
+    }
+  }
 }

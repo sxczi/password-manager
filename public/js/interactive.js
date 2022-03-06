@@ -1,3 +1,12 @@
+function generatePassword(length) {
+    const alphabet = 'QAZWSXEDCRFVTGBYHNUJMIKOLPp_#@!$%&lmokijuhygtfrdeswaqzxcmnbv1234567890'.split('');
+    let generatedPassword = '';
+    for (let i = 0; i < length; i++) {
+        generatedPassword += alphabet[Math.floor(Math.random() * alphabet.length)];
+    }
+    return generatedPassword;
+}
+
 export function interactive() {
     const view = (input) => {
         if (input.querySelector('.pass').getAttribute('type') === 'password') {
@@ -20,7 +29,7 @@ export function interactive() {
             },
             body: JSON.stringify({
                 username,
-                password
+                password: password || generatePassword(16)
             })
         }).then(() => {
             console.log('Edited account #' + id);

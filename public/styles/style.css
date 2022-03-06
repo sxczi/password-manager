@@ -20,6 +20,31 @@ body {
   color: white;
 }
 
+.dark-mode input {
+  color: white !important;
+}
+
+.dark-mode .row {
+  border-bottom-color: white !important;
+}
+
+.dark-mode .top-row {
+  color: white !important;
+}
+
+.dark-mode svg {
+  fill: white !important;
+}
+
+.dark-mode .dropdown {
+  background-color: #222 !important;
+  color: white !important;
+}
+
+.dark-mode .dropdown ul li:first-child:hover {
+  background-color: #333 !important;
+}
+
 header {
   width: 60%;
   margin: auto;
@@ -72,7 +97,7 @@ main {
 main .accounts .top-row {
   margin-top: 0 !important;
   margin-bottom: 2em !important;
-  color: gray;
+  color: #404040;
 }
 
 main .accounts .row {
@@ -248,7 +273,9 @@ main .accounts .row .right .buttons .dots .dropdown ul li:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .row .left, .row .center, .row .right {
+  .row .left,
+  .row .center,
+  .row .right {
     margin-bottom: 1em;
   }
   .row .right input {
